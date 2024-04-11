@@ -189,6 +189,9 @@
         - 클래스는 상속한다 <-> 인터페이스는 구현한다
         - 클래스는 상속시 별다른 문제가 없음 <-> 인터페이스 구현 시 약속을 지키지 않으면 오류표시
         - 인터페이스에서 약속한 메서드를 구현하지 않으면 빌드 불가!
+
+        ![인터페이스 설명](https://raw.githubusercontent.com/y7pWuXAq/2024-basic-csharp/main/images/cs001.png)
+        
     
     - 추상클래스(abstract)
         - Virutal 메서드하고도 유사
