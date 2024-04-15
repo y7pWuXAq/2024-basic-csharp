@@ -207,16 +207,68 @@
 
 ### DAY 02
 
-- 컬렉션(배열, 리스트, 인덱서)
-- 일반화(Generic) 프로그래밍
-- 예외처리
-- 대리자와 이벤트
-- 람다식
-- 애트리뷰트
-- dynamic 형식
-- Winform (파일, 스레드)
-- 가비지 컬렉션
-- 네트워크 프로그래밍
+- TIP, C# 에서 빌드 시 오류 프로세스 액세스 오류
+    - 빌드하고자는 프로그램이 백그라운드 상에 실행중이기 때문
+    - Ctrl + Shift + ESC(작업관리자) 에서 해당 프로세스 작업 끝내기 후
+    - 재빌드
 
+- 컬렉션(배열, 리스트, 인덱서)
+    - 모든 배열은 System.Array 클래스를 상속한 하위 클래스
+    - 기본적인 배열의 사용법, Python 리스트와도 동일
+    - 배열 분할 - C# 8.0부터. 파이썬의 배열 슬라이스를 도입(잘만든 기능)
+    - 컬렉션, 파이썬이 리스트, 스택, 큐, 딕셔너리와 동일
+        - ArrayList
+        - Stack, Queue
+        - Hashtable(== Dictionary)
+    - foreach를 사용할 수 있는 객체로 만들기 - yield
+
+- 일반화(Generic) 프로그래밍
+    - 파이썬 - 변수에 제약사항 없음 
+    - 타입의 제약을 해소하고자 만든 기능. ArrayList 등이 해결(단, 박싱(언박싱)등 성능의 문제가 있음)
+    - **하나의 메서드로 여러 타입의 처리를 해줄 수 있는 프로그래밍 방식**
+    - 일반화 컬렉션
+        - List<T>
+        - Stack<T>, Queue<T>
+        - Dictionary<TKey, TValue>
+
+- 예외처리
+    - 소스코드 상 문법적 오류 - 오류(Error)
+    - 실행 중 생기는 오류 - 예외(Exception)
+
+    ```cs
+    try {
+        // .. 예외가 발생할 것 같은 소스코드
+    } catch (Exception ex) {
+        /* 모든 예외클래스의 조상은 Exception(예 IndexOutOfRangeException)
+           어떤 예외클래스를 쓸지 모르면 무조건 Exception 클래스 사용하면 됨 */
+        Console.WriteLine(ex.Message);
+    } finally {
+        // 예외발생 유무에 상관없이 항상 실행
+    }
+    ```
+
+- 대리자와 이벤트
+    - 메서드 호출 시 매개변수 전달
+    - 대리자 호출 시 함수(메서드) 자체를 전달
+    - 이벤트 - 컴퓨터 내에서 발생하는 객체의 사건들
+    - delegate --> event
+    - 윈폼개발 --> 이벤트 기반(Event driven) 프로그래밍
+
+- TIP, C# 주석 중 영역을 지정할 수 있는 주석
+    - #region ~ #endregion 영역을 Expend 또는 Collapse 가능
+
+    ![region주석](https://raw.githubusercontent.com/y7pWuXAq/2024-basic-csharp/main/images/cs002.png)
+
+
+### DAY 03
+
+- 람다식 
+- LINQ 
+- 애트리뷰트
+- 파이썬 실행
+- Winform UI 개발 + 파일, 스레드
+- 가비지 컬렉션
+
+## 4일차
 - WPF
 - 예제 프로젝트
