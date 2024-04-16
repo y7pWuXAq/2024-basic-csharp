@@ -305,15 +305,33 @@
         - WPF(Windows Presentation Foundation)
     - WYSIWYG(What You See Is Wath You Get) 방식의 GUI 프로그램 개발
 
-### 4일차
+
+### DAY 04
 
 - 윈폼 UI 개발
 - Winforms로 윈폼 개발 학습
-    - 컨트롤 Prefix
-        - 
+    - 컨트롤 Prefix Naming Guide
         - ComboBox : Cbo -
         - CheckBox : Chk -
         - RadioButton : Rdo -
+        - TextBox : Txt -
+        - Button : Btn -
+        - TrackBar : Trb -
+        - ProgressBar : Prg -
+        - PictureBox : Pic -
+        - *Dialog : Dlg - 
+
+
+### DAY 05
+
+- 윈폼 UI 개발 (이어서!)
+    - 스레드 추가
+    - 파일 입출력 추가
+    - 비동기 작업 앱
+    - 윈도우 탐색기 앱
+    - 도서관리 앱 With SQL Server (DB 연동)
+    - ModernUI 앱
+    - 국가교통정보센터 CCTV뷰 앱
+    - IoT Dummy 앱 With SQL Server (DB 연동)
 
 - WPF
-- 예제 프로젝트
