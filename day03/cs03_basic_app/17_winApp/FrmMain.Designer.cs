@@ -39,7 +39,6 @@
             Text = "FrmMain";
             FormClosing += FrmMain_FormClosing;
             Click += FrmMain_Click;
-            KeyPress += FrmMain_KeyPress;
             ResumeLayout(false);
         }
 

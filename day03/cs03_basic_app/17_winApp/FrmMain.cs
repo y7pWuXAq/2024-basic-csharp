@@ -26,10 +26,5 @@ namespace _17_winApp
         {
             MessageBox.Show("Click!!!");
         }
-
-        private void FrmMain_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
     }
 }

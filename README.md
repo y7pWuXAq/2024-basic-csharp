@@ -307,5 +307,13 @@
 
 ### 4일차
 
+- 윈폼 UI 개발
+- Winforms로 윈폼 개발 학습
+    - 컨트롤 Prefix
+        - 
+        - ComboBox : Cbo -
+        - CheckBox : Chk -
+        - RadioButton : Rdo -
+
 - WPF
 - 예제 프로젝트
