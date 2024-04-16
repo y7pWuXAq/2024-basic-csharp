@@ -1,5 +1,7 @@
 ﻿// 파이썬용 라이브러리 사용 등록
 using IronPython.Hosting;
+using static System.Net.Mime.MediaTypeNames;
+using System;
 
 namespace _15_Pythons
 {
@@ -35,8 +37,8 @@ namespace _15_Pythons
             paths.Add(@"C:\Users\user\AppData\Roaming\Python\Python311\site-packages\win32");
             paths.Add(@"C:\Users\user\AppData\Roaming\Python\Python311\site-packages\win32\lib");
 
-            // 실행시킬 Python 파일 경로 설정
-            var filePath = @"C:\Sources\2024-basic-csharp\day03\12_lambdas\15_Pythons\test.py";
+        // 실행시킬 Python 파일 경로 설정
+            var filePath = @"C:\Sources\2024-basic-csharp\day03\cs03_basic_app\15_Pythons\test.py";
             var source = engine.CreateScriptSourceFromFile(filePath);
 
             // Python 실행
