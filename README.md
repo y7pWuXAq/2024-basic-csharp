@@ -251,8 +251,9 @@
     - 메서드 호출 시 매개변수 전달
     - 대리자 호출 시 함수(메서드) 자체를 전달
     - 이벤트 - 컴퓨터 내에서 발생하는 객체의 사건들
-    - delegate --> event
-    - 윈폼개발 --> 이벤트 기반(Event driven) 프로그래밍
+    - 익명 메서드 사용 가능
+    - delegate > event
+    - 윈폼개발 > 이벤트 기반(Event driven) 프로그래밍
 
 - TIP, C# 주석 중 영역을 지정할 수 있는 주석
     - #region ~ #endregion 영역을 Expend 또는 Collapse 가능
@@ -262,13 +263,49 @@
 
 ### DAY 03
 
-- 람다식 
-- LINQ 
-- 애트리뷰트
-- 파이썬 실행
-- Winform UI 개발 + 파일, 스레드
-- 가비지 컬렉션
+- 람다식
+    - 익명 메서드를 만드는 방식 중에 하나 : delegate, lambda expresion
+    - 익명 메서드 사용하면 코딩량 줄어듬, 프로퍼티 동일
+    - 익명 메서드 사용 할 때마다 대리자를 선언해야 하기 때문에
+        - Func, Action을 MS에서 미리 만들어둠
 
-## 4일차
+- LINQ(Lanuguage INtegrated Query)
+    - C#에 통합 된 데이터 질의 기능 (DB SQL과 거의 동일)
+    - group by에 집계함수가 필수가 아닌 것 외에는 SQL과 거의 동일
+    - 단, 키워드 사용순서 다른 것은 인지하기
+    - LINQ만 고집하면 XX! 기존의 C# 로직을 사용해야 할 수 있기 때문에!
+
+- 리플렉션
+    - 리플렉션 object.GetType();
+
+- 애트리뷰트
+    - [obsolete("다음 버전 사용불가!")]
+
+- C#에서 파이썬 실행하기
+    - COM 객체 사용(dynamic)
+    - IronPython 라이브러리 : 파이썬을 C#에서 사용 할 수 있도록 해주는 오픈소스 라이브러리
+    - NuGet Package : 파이썬 pip와 같은 라이브러리 관리 툴
+    - 선택 프로젝트 > 종속성 > 우클릭 > NuGet 패키지 관리
+    - 실행하는 방법
+        1. 파이썬 엔진, 스코프, 설정 경로 생성
+        2. 해당 컴퓨터 파이썬 경로들 설정
+        3. 실행시킬 파이썬 파일 경로 지정
+        4. 파이선 실행
+        5. 파이썬 함수를 Func 또는 Action으로 매핑
+        6. 매핑시킨 메서드를 실행
+
+- 가비지 컬렉션
+    - C, C++은 메모리 사용 시 개발자가 직접 메모리 해제 해야 함
+    - C#, Java, Python 등의 객체지향 언어는 GC(쓰레기 수집기) 기능으로 프로그램이 직접 관리
+    - C# 개발자는 메모리 관리에 아무것도 할게 없음!
+
+- Winform UI 개발 + 파일, 스레드
+    - 그래픽 사용자 인터페이스를 만드는 방법
+        - Window Forms(Windows Forms)
+        - WPF(Windows Presentation Foundation)
+    - WYSIWYG(What You See Is Wath You Get) 방식의 GUI 프로그램 개발
+
+### 4일차
+
 - WPF
 - 예제 프로젝트
