@@ -58,6 +58,7 @@ namespace _18_winControlApp
         #endregion
 
         #region '트리뷰 랜덤값 세팅'
+
         Random rand = new Random(); // 트리뷰 노드 이름으로 사용 할 랜덤값
         public FrmMain()
         {
