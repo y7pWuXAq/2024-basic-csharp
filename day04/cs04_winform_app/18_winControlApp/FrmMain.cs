@@ -5,6 +5,16 @@ namespace _18_winControlApp
 {
     public partial class FrmMain : Form
     {
+        public FrmMain()
+        {
+            InitializeComponent(); // 디자이너에서 정의한 화면구성 초기화
+
+            LsvDummy.Columns.Add("이름");
+            LsvDummy.Columns.Add("깊이");
+
+            // GrbEditor.Text = "Txet Editor"; // 코드 비하인드 디자인 셋팅
+        }
+
         #region '콤보박스, 체크박스, 텍스트박스'
 
         private void FrmMain_Load(object sender, EventArgs e)
@@ -58,17 +68,7 @@ namespace _18_winControlApp
         #endregion
 
         #region '트리뷰 랜덤값 세팅'
-
         Random rand = new Random(); // 트리뷰 노드 이름으로 사용 할 랜덤값
-        public FrmMain()
-        {
-            InitializeComponent(); // 디자이너에서 정의한 화면구성 초기화
-
-            LsvDummy.Columns.Add("이름");
-            LsvDummy.Columns.Add("깊이");
-
-            // GrbEditor.Text = "Txet Editor"; // 코드 비하인드 디자인 셋팅
-        }
         #endregion
 
         #region '트리뷰, 리스트뷰'
