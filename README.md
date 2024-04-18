@@ -345,10 +345,31 @@
 
 ### DAY 06
 
+- 예제 프로젝트
     - 윈도우 탐색기 앱
-    - 도서관리 앱 With SQL Server (DB 연동)
+        - MyExplorer 프로젝트 생성
+        - 앱 아이콘 : https://www.flaticon.com
+        - 트리뷰, 리스트뷰 기능 추가
+        - 컨텍스트 메뉴 추가
+        
+        ![중간결과](https://raw.githubusercontent.com/y7pWuXAq/2024-basic-csharp/main/images/cs005.png)
+
+
+        - 미적용 기능 : 컨텍스트 메뉴 보기 기능, 더블클릭으로 프로그램 실행
+
+
+### DAT 07
+
+- 토이 프로젝트
+    - 윈도우 탐색기 앱 종료
     - ModernUI 앱
+    - 도서관리 앱 With SQL Server (DB 연동)
     - 국가교통정보센터 CCTV뷰 앱
     - IoT Dummy 앱 With SQL Server (DB 연동)
 
-- WPF
+
+#### 개인 토이 프로젝트
+- 심플 메모장 앱
+    - 기능
+    - 특징
+    - 배운점
