@@ -368,7 +368,22 @@
 
 
 
+
     - 도서관리 앱 With SQL Server (DB 연동), ModernUI 앱(NuGet 패키지)
+
+        - Nullable(C#에만 있음)
+        ```cs
+            // 값형식 변수는 null 사용x
+            // 값형식 변수에 null값을 넣을 수 있도록 만들어준 기능 Nullable(C#에만 있음)
+            
+            int? a = null;
+            double? b = null;
+            float? c = null;
+
+            // 변수명 뒤에? 추가하기
+        ```
+        - 로그인 창 만들기
+        - DB 연동
 
 
 ### DAY 08
@@ -376,9 +391,8 @@
 - 토이 프로젝트
     - 도서관리 앱 종료
     - IoT Dummy 앱 With SQL Sever(IoT, DB 활용)
-    - 국가교통정보센터 CCTV뷰 앱
-    
-    
+
+    - 국가교통정보센터 CCTV뷰 앱 (OpenAPI, NuGet dll, Network, UI디자인, 비동기메서드)
 
 
 #### 개인 토이 프로젝트
