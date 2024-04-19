@@ -362,6 +362,12 @@
 
 - 토이 프로젝트
     - 윈도우 탐색기 앱 종료
+ 
+
+    https://github.com/y7pWuXAq/2024-basic-csharp/assets/158008080/f82b9f2d-4c42-4a4b-8c10-b57f5b262d69
+
+
+
     - 도서관리 앱 With SQL Server (DB 연동), ModernUI 앱(NuGet 패키지)
 
 
