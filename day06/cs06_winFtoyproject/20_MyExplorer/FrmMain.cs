@@ -135,5 +135,54 @@ namespace _20_MyExplorer
                 CmsFiles.Show(LsvFile, e.Location); // 마우스 클릭한 위치에 창 띄우기
             }
         }
+
+        /* 리스트뷰 아이템 더블클릭 이벤트 핸들러(실행파일 실행) */
+        private void LsvFile_DoubleClick(object sender, EventArgs e)
+        {
+            try // 예외처리
+            {
+                var extension = LsvFile.SelectedItems[0].Text.Split(".")[1];
+                if (extension == "exe")
+                { // 확장자가 실행파일이면,
+                
+                    // MessageBox.Show(LsvFile.SelectedItems[0].Text); // 디버깅용
+                    // 실행파일의 경로는 TxtPath
+                    var fullPath = TxtPath.Text + "\\" + LsvFile.SelectedItems[0].Text;
+                    // MessageBox.Show(fullPath);
+                    Process.Start(fullPath); // 외부 프로그램 실행
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "경고!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /* 컨텍스트 메뉴 선택 이벤트 핸들러 */
+        private void TstMenuLargeIcon_Click(object sender, EventArgs e)
+        {
+            LsvFile.View = View.LargeIcon;
+        }
+
+        private void TstMenuSmallIcon_Click(object sender, EventArgs e)
+        {
+            LsvFile.View = View.SmallIcon;
+        }
+
+        private void TstMenuList_Click(object sender, EventArgs e)
+        {
+            LsvFile.View = View.List;
+        }
+
+        private void TstMenuDetails_Click(object sender, EventArgs e)
+        {
+            LsvFile.View = View.Details;
+        }
+
+        private void TstMenuTile_Click(object sender, EventArgs e)
+        {
+            LsvFile.View = View.Tile;
+        }
+
     }
 }

@@ -42,13 +42,14 @@ namespace _20_MyExplorer
             ClhModifideDate = new ColumnHeader();
             ClhType = new ColumnHeader();
             ClhSize = new ColumnHeader();
+            ImgLargeIcon = new ImageList(components);
             CmsFiles = new ContextMenuStrip(components);
             보기ToolStripMenuItem = new ToolStripMenuItem();
-            toolStripTextBox1 = new ToolStripTextBox();
-            toolStripTextBox2 = new ToolStripTextBox();
-            toolStripTextBox3 = new ToolStripTextBox();
-            toolStripTextBox4 = new ToolStripTextBox();
-            toolStripTextBox5 = new ToolStripTextBox();
+            TstMenuLargeIcon = new ToolStripMenuItem();
+            TstMenuSmallIcon = new ToolStripMenuItem();
+            TstMenuList = new ToolStripMenuItem();
+            TstMenuDetails = new ToolStripMenuItem();
+            TstMenuTile = new ToolStripMenuItem();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)SpcExplorer).BeginInit();
             SpcExplorer.Panel1.SuspendLayout();
@@ -148,6 +149,7 @@ namespace _20_MyExplorer
             LsvFile.BorderStyle = BorderStyle.None;
             LsvFile.Columns.AddRange(new ColumnHeader[] { ClhTitle, ClhModifideDate, ClhType, ClhSize });
             LsvFile.Dock = DockStyle.Fill;
+            LsvFile.LargeImageList = ImgLargeIcon;
             LsvFile.Location = new Point(0, 0);
             LsvFile.Name = "LsvFile";
             LsvFile.Size = new Size(591, 518);
@@ -155,6 +157,7 @@ namespace _20_MyExplorer
             LsvFile.TabIndex = 0;
             LsvFile.UseCompatibleStateImageBehavior = false;
             LsvFile.View = View.Details;
+            LsvFile.DoubleClick += LsvFile_DoubleClick;
             LsvFile.MouseDown += LsvFile_MouseDown;
             // 
             // ClhTitle
@@ -178,6 +181,18 @@ namespace _20_MyExplorer
             ClhSize.TextAlign = HorizontalAlignment.Right;
             ClhSize.Width = 80;
             // 
+            // ImgLargeIcon
+            // 
+            ImgLargeIcon.ColorDepth = ColorDepth.Depth32Bit;
+            ImgLargeIcon.ImageStream = (ImageListStreamer)resources.GetObject("ImgLargeIcon.ImageStream");
+            ImgLargeIcon.TransparentColor = Color.Transparent;
+            ImgLargeIcon.Images.SetKeyName(0, "hard-drive.png");
+            ImgLargeIcon.Images.SetKeyName(1, "folder-normal.png");
+            ImgLargeIcon.Images.SetKeyName(2, "folder-open.png");
+            ImgLargeIcon.Images.SetKeyName(3, "file-exe.png");
+            ImgLargeIcon.Images.SetKeyName(4, "file-normal.png");
+            ImgLargeIcon.Images.SetKeyName(5, "txt.png");
+            // 
             // CmsFiles
             // 
             CmsFiles.Items.AddRange(new ToolStripItem[] { 보기ToolStripMenuItem });
@@ -186,46 +201,51 @@ namespace _20_MyExplorer
             // 
             // 보기ToolStripMenuItem
             // 
-            보기ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripTextBox1, toolStripTextBox2, toolStripTextBox3, toolStripTextBox4, toolStripTextBox5 });
+            보기ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { TstMenuLargeIcon, TstMenuSmallIcon, TstMenuList, TstMenuDetails, TstMenuTile });
             보기ToolStripMenuItem.Font = new Font("나눔고딕", 9F);
             보기ToolStripMenuItem.Name = "보기ToolStripMenuItem";
             보기ToolStripMenuItem.Size = new Size(96, 22);
             보기ToolStripMenuItem.Text = "보기";
             // 
-            // toolStripTextBox1
+            // TstMenuLargeIcon
             // 
-            toolStripTextBox1.Font = new Font("나눔고딕", 9F);
-            toolStripTextBox1.Name = "toolStripTextBox1";
-            toolStripTextBox1.Size = new Size(100, 21);
-            toolStripTextBox1.Text = "큰 아이콘";
+            TstMenuLargeIcon.Font = new Font("나눔고딕", 9F);
+            TstMenuLargeIcon.Name = "TstMenuLargeIcon";
+            TstMenuLargeIcon.Size = new Size(135, 22);
+            TstMenuLargeIcon.Text = "큰 아이콘";
+            TstMenuLargeIcon.Click += TstMenuLargeIcon_Click;
             // 
-            // toolStripTextBox2
+            // TstMenuSmallIcon
             // 
-            toolStripTextBox2.Font = new Font("나눔고딕", 9F);
-            toolStripTextBox2.Name = "toolStripTextBox2";
-            toolStripTextBox2.Size = new Size(100, 21);
-            toolStripTextBox2.Text = "작은 아이콘";
+            TstMenuSmallIcon.Font = new Font("나눔고딕", 9F);
+            TstMenuSmallIcon.Name = "TstMenuSmallIcon";
+            TstMenuSmallIcon.Size = new Size(135, 22);
+            TstMenuSmallIcon.Text = "작은 아이콘";
+            TstMenuSmallIcon.Click += TstMenuSmallIcon_Click;
             // 
-            // toolStripTextBox3
+            // TstMenuList
             // 
-            toolStripTextBox3.Font = new Font("나눔고딕", 9F);
-            toolStripTextBox3.Name = "toolStripTextBox3";
-            toolStripTextBox3.Size = new Size(100, 21);
-            toolStripTextBox3.Text = "목록";
+            TstMenuList.Font = new Font("나눔고딕", 9F);
+            TstMenuList.Name = "TstMenuList";
+            TstMenuList.Size = new Size(135, 22);
+            TstMenuList.Text = "목록";
+            TstMenuList.Click += TstMenuList_Click;
             // 
-            // toolStripTextBox4
+            // TstMenuDetails
             // 
-            toolStripTextBox4.Font = new Font("나눔고딕", 9F);
-            toolStripTextBox4.Name = "toolStripTextBox4";
-            toolStripTextBox4.Size = new Size(100, 21);
-            toolStripTextBox4.Text = "자세히";
+            TstMenuDetails.Font = new Font("나눔고딕", 9F);
+            TstMenuDetails.Name = "TstMenuDetails";
+            TstMenuDetails.Size = new Size(135, 22);
+            TstMenuDetails.Text = "자세히";
+            TstMenuDetails.Click += TstMenuDetails_Click;
             // 
-            // toolStripTextBox5
+            // TstMenuTile
             // 
-            toolStripTextBox5.Font = new Font("나눔고딕", 9F);
-            toolStripTextBox5.Name = "toolStripTextBox5";
-            toolStripTextBox5.Size = new Size(100, 21);
-            toolStripTextBox5.Text = "타일";
+            TstMenuTile.Font = new Font("나눔고딕", 9F);
+            TstMenuTile.Name = "TstMenuTile";
+            TstMenuTile.Size = new Size(135, 22);
+            TstMenuTile.Text = "타일";
+            TstMenuTile.Click += TstMenuTile_Click;
             // 
             // FrmMain
             // 
@@ -264,12 +284,13 @@ namespace _20_MyExplorer
         private ColumnHeader ClhType;
         private ColumnHeader ClhSize;
         private ImageList ImgSmallIcon;
+        private ImageList ImgLargeIcon;
         private ContextMenuStrip CmsFiles;
         private ToolStripMenuItem 보기ToolStripMenuItem;
-        private ToolStripTextBox toolStripTextBox1;
-        private ToolStripTextBox toolStripTextBox2;
-        private ToolStripTextBox toolStripTextBox3;
-        private ToolStripTextBox toolStripTextBox4;
-        private ToolStripTextBox toolStripTextBox5;
+        private ToolStripMenuItem TstMenuLargeIcon;
+        private ToolStripMenuItem TstMenuSmallIcon;
+        private ToolStripMenuItem TstMenuList;
+        private ToolStripMenuItem TstMenuDetails;
+        private ToolStripMenuItem TstMenuTile;
     }
 }

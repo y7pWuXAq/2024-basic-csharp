@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPEDIA", "MyPEDIA\MyPEDIA.csproj", "{473C0D00-A3E1-4C58-B07E-7DEBF871957D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{473C0D00-A3E1-4C58-B07E-7DEBF871957D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{473C0D00-A3E1-4C58-B07E-7DEBF871957D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{473C0D00-A3E1-4C58-B07E-7DEBF871957D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{473C0D00-A3E1-4C58-B07E-7DEBF871957D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D3533177-EE98-470C-924A-7BA16CF07B5F}
+	EndGlobalSection
+EndGlobal

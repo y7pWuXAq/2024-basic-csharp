@@ -362,10 +362,17 @@
 
 - 토이 프로젝트
     - 윈도우 탐색기 앱 종료
-    - ModernUI 앱
-    - 도서관리 앱 With SQL Server (DB 연동)
+    - 도서관리 앱 With SQL Server (DB 연동), ModernUI 앱(NuGet 패키지)
+
+
+### DAY 08
+
+- 토이 프로젝트
+    - 도서관리 앱 종료
+    - IoT Dummy 앱 With SQL Sever(IoT, DB 활용)
     - 국가교통정보센터 CCTV뷰 앱
-    - IoT Dummy 앱 With SQL Server (DB 연동)
+    
+    
 
 
 #### 개인 토이 프로젝트
