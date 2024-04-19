@@ -1,4 +1,4 @@
-namespace MyPEDIA
+namespace MYPEDIA
 {
     internal static class Program
     {
