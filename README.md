@@ -389,9 +389,26 @@
 ### DAY 08
 
 - 토이 프로젝트
-    - 도서관리 앱 종료
-    - IoT Dummy 앱 With SQL Sever(IoT, DB 활용)
+    - 도서 관리 앱
+        - 앱 사용자 관리
+            - 아이디 중복 방지
+            - 비밀번호 암호화(MD5)
 
+
+### DAY 09
+
+- 토이 프로젝트
+    - 도서 장르 관리
+    - 도서 정보 관리
+    - 도서 회원 관리
+    - 도서 대출 관리
+    - 이 프로그램은...
+
+
+### 나머지
+
+- Pending
+    - IoT Dummy 앱 With SQL Sever(IoT, DB 활용)
     - 국가교통정보센터 CCTV뷰 앱 (OpenAPI, NuGet dll, Network, UI디자인, 비동기메서드)
 
 
