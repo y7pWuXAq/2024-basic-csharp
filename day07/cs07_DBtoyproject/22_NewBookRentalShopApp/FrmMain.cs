@@ -15,7 +15,9 @@ namespace _22_NewBookRentalShopApp
     {
         /* 생성자 초기화 영역 */
 
-        FrmLoginUser FrmLoginUser = null; // 객체를 메서드로 생성
+        FrmLoginUser frmLoginUser = null; // 객체를 메서드로 생성
+        FrmBookDivision frmBookDivision = null;
+        FrmBookInfo frmBookInfo = null;
 
         public FrmMain()
         {
@@ -31,14 +33,32 @@ namespace _22_NewBookRentalShopApp
             frm.ShowDialog();
         }
 
-        /* 상단 메뉴 이벤트 선택 이벤트 핸들러 */
+        #region '상단 메뉴 선택 이벤트'
+        /* 상단 메뉴 선택 이벤트 핸들러 */
+
+        // 로그인 사용자 관리
         private void MnuLoginUsers_Click(object sender, EventArgs e)
         {
             // 이미 창이 열려 있으면 새로 생성 할 필요가 없기 때문에
             // 해당 작업 생략 시 메뉴 클릭 시 마다 새 폼이 열림
-            FrmLoginUser = ShowActiveForm(FrmLoginUser, typeof(FrmLoginUser)) as FrmLoginUser;
+            frmLoginUser = ShowActiveForm(frmLoginUser, typeof(FrmLoginUser)) as FrmLoginUser;
         }
 
+        // 도서 장르 관리
+        private void MnuBookDivision_Click(object sender, EventArgs e)
+        {
+            frmBookDivision = ShowActiveForm(frmBookDivision, typeof(FrmBookDivision)) as FrmBookDivision;
+        }
+
+        // 도서 정보 관리
+        private void MnuBookInfo_Click(object sender, EventArgs e)
+        {
+            // 객체변수, 객체변수, 클래스, 클래스
+            frmBookInfo = ShowActiveForm(frmBookInfo, typeof(FrmBookInfo)) as FrmBookInfo;
+        }
+        #endregion
+
+        #region '로그인 사용자 관리창 여는 함수'
         /* 로그인 사용자 관리창 여는 함수 */
         Form ShowActiveForm(Form form, Type type)
         {
@@ -65,5 +85,7 @@ namespace _22_NewBookRentalShopApp
             }
             return form;
         }
+        #endregion
+
     }
 }

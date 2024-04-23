@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C6415CC5-CD67-4970-BCE3-1F5887319CEE}</ProjectGuid>
+    <ProjectGuid>{C7A7000C-EBE7-4F0C-B2EB-C8ACBA1E9361}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>_22_NewBookRentalShopApp</RootNamespace>
-    <AssemblyName>22_NewBookRentalShopApp</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <RootNamespace>MYPEDIA</RootNamespace>
+    <AssemblyName>MYPEDIA</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>bookcase.ico</ApplicationIcon>
+    <ApplicationIcon>star.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
@@ -58,29 +58,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmBookInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmBookInfo.Designer.cs">
-      <DependentUpon>FrmBookInfo.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmBookDivision.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmBookDivision.Designer.cs">
-      <DependentUpon>FrmBookDivision.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmLoginUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmLoginUser.Designer.cs">
-      <DependentUpon>FrmLoginUser.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
@@ -91,17 +73,8 @@
     <Compile Include="Helper\Common.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmBookInfo.resx">
-      <DependentUpon>FrmBookInfo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmBookDivision.resx">
-      <DependentUpon>FrmBookDivision.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmLoginUser.resx">
-      <DependentUpon>FrmLoginUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
@@ -114,7 +87,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -131,17 +103,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bookcase.ico" />
-    <Content Include="imgs\book.ico" />
-    <Content Include="imgs\book.png" />
-    <Content Include="imgs\division.ico" />
-    <Content Include="imgs\division.png" />
-    <Content Include="imgs\login.ico" />
-    <Content Include="imgs\member.ico" />
-    <Content Include="imgs\member.png" />
-    <Content Include="imgs\rental.ico" />
-    <Content Include="imgs\rental.png" />
-    <None Include="imgs\Login.png" />
+    <Content Include="login.ico" />
+    <Content Include="star.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
