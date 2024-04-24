@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 
@@ -34,7 +27,7 @@ namespace _22_NewBookRentalShopApp
             frm.TopMost = true; // 창이 제일 위에 뜨도록 하는 설정
             frm.ShowDialog();
 
-            LblLoginId.Text = Helper.Common.LoginId; // 메인창에 로그인 된 아이디 표시
+            LblLoginId.Text = Helper.Common.LoginId; // 메인창에 로그인 된 아이디
         }
 
         #region '상단 메뉴 선택 이벤트'
