@@ -36,42 +36,6 @@ namespace _22_NewBookRentalShopApp
             
         }
 
-        #region 'InitInputData() 메서드'
-        private void InitInputData()
-        {
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(Helper.Common.ConnString))
-                {
-                    conn.Open();
-
-                    var query = @"SELECT Division, Names From divtbl";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    // SqlDataReader은 개발자가 하나씩 처리할 때
-                    // SqlDataAdapter, DataSet는 데이터그리드뷰 등에 뿌릴 때
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    var temp = new Dictionary<string, string>();
-
-                    while (reader.Read())
-                    {
-                        // reader[0] = Division 컬럼, reader[1] = Names 컬럼
-                        temp.Add(reader[0].ToString(), reader[1].ToString());
-                    }
-
-                    // Debug.WriteLine(temp.Count);
-                    CboDivision.DataSource = new BindingSource(temp, null);
-                    CboDivision.DisplayMember = "Value"; // 장르 표시
-                    CboDivision.ValueMember = "Key"; // 도서 구분 코드 표시
-                    CboDivision.SelectedIndex = -1;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"오류 : {ex.Message}", "경고", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        #endregion
-
         #region 'ReFreshData() 메서드'
 
         /* 데이터 그리뷰에 데이터를 새로 부르기 */
@@ -115,6 +79,42 @@ namespace _22_NewBookRentalShopApp
                 DgvResult.Columns[4].Width = 195;
                 DgvResult.Columns[5].Width = 75;
                 DgvResult.Columns[7].Width = 70;
+            }
+        }
+        #endregion
+
+        #region 'InitInputData() 메서드'
+        private void InitInputData()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Helper.Common.ConnString))
+                {
+                    conn.Open();
+
+                    var query = @"SELECT Division, Names From divtbl";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    // SqlDataReader은 개발자가 하나씩 처리할 때
+                    // SqlDataAdapter, DataSet는 데이터그리드뷰 등에 뿌릴 때
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    var temp = new Dictionary<string, string>();
+
+                    while (reader.Read())
+                    {
+                        // reader[0] = Division 컬럼, reader[1] = Names 컬럼
+                        temp.Add(reader[0].ToString(), reader[1].ToString());
+                    }
+
+                    // Debug.WriteLine(temp.Count);
+                    CboDivision.DataSource = new BindingSource(temp, null);
+                    CboDivision.DisplayMember = "Value"; // 장르 표시
+                    CboDivision.ValueMember = "Key"; // 도서 구분 코드 표시
+                    CboDivision.SelectedIndex = -1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"오류 : {ex.Message}", "경고", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         #endregion
@@ -321,5 +321,14 @@ namespace _22_NewBookRentalShopApp
             }
         }
 
+        /* ISBN 숫자만 입력되도록 설정 */
+        private void TxtIsbn_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // 숫자 이외에는 전부 막아버림
+            if (!char.IsDigit(e.KeyChar) && (e.KeyChar != '.') && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

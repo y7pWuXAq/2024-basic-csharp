@@ -1,6 +1,6 @@
 ﻿namespace _22_NewBookRentalShopApp
 {
-    partial class FrmBookInfo
+    partial class FrmMember
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBookInfo));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMember));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.DgvResult = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.NudPrice = new System.Windows.Forms.NumericUpDown();
-            this.DtpReleaseDate = new MetroFramework.Controls.MetroDateTime();
-            this.CboDivision = new MetroFramework.Controls.MetroComboBox();
+            this.CboLevels = new MetroFramework.Controls.MetroComboBox();
             this.BtnDel = new MetroFramework.Controls.MetroButton();
             this.BtnSave = new MetroFramework.Controls.MetroButton();
             this.BtnNew = new MetroFramework.Controls.MetroButton();
-            this.TxtIsbn = new MetroFramework.Controls.MetroTextBox();
+            this.TxtEmail = new MetroFramework.Controls.MetroTextBox();
+            this.TxtAddr = new MetroFramework.Controls.MetroTextBox();
             this.TxtNames = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.TxtAuthor = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.TxtBookIdx = new MetroFramework.Controls.MetroTextBox();
+            this.TxtMemberIdx = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.TxtMobile = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvResult)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NudPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -88,19 +85,17 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.NudPrice);
-            this.groupBox1.Controls.Add(this.DtpReleaseDate);
-            this.groupBox1.Controls.Add(this.CboDivision);
+            this.groupBox1.Controls.Add(this.CboLevels);
             this.groupBox1.Controls.Add(this.BtnDel);
             this.groupBox1.Controls.Add(this.BtnSave);
             this.groupBox1.Controls.Add(this.BtnNew);
-            this.groupBox1.Controls.Add(this.TxtIsbn);
+            this.groupBox1.Controls.Add(this.TxtEmail);
+            this.groupBox1.Controls.Add(this.TxtMobile);
+            this.groupBox1.Controls.Add(this.TxtAddr);
             this.groupBox1.Controls.Add(this.TxtNames);
-            this.groupBox1.Controls.Add(this.metroLabel7);
-            this.groupBox1.Controls.Add(this.TxtAuthor);
             this.groupBox1.Controls.Add(this.metroLabel4);
             this.groupBox1.Controls.Add(this.metroLabel6);
-            this.groupBox1.Controls.Add(this.TxtBookIdx);
+            this.groupBox1.Controls.Add(this.TxtMemberIdx);
             this.groupBox1.Controls.Add(this.metroLabel5);
             this.groupBox1.Controls.Add(this.metroLabel1);
             this.groupBox1.Controls.Add(this.metroLabel3);
@@ -111,53 +106,28 @@
             this.groupBox1.Size = new System.Drawing.Size(312, 432);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "도서 정보 입력 항목";
+            this.groupBox1.Text = "도서 회원 입력 항목";
             // 
-            // NudPrice
+            // CboLevels
             // 
-            this.NudPrice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.CboLevels.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.NudPrice.Location = new System.Drawing.Point(111, 249);
-            this.NudPrice.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.NudPrice.Name = "NudPrice";
-            this.NudPrice.Size = new System.Drawing.Size(171, 21);
-            this.NudPrice.TabIndex = 7;
-            // 
-            // DtpReleaseDate
-            // 
-            this.DtpReleaseDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DtpReleaseDate.CalendarFont = new System.Drawing.Font("나눔고딕", 8F);
-            this.DtpReleaseDate.Location = new System.Drawing.Point(111, 179);
-            this.DtpReleaseDate.MinimumSize = new System.Drawing.Size(0, 29);
-            this.DtpReleaseDate.Name = "DtpReleaseDate";
-            this.DtpReleaseDate.Size = new System.Drawing.Size(171, 29);
-            this.DtpReleaseDate.TabIndex = 5;
-            // 
-            // CboDivision
-            // 
-            this.CboDivision.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CboDivision.FormattingEnabled = true;
-            this.CboDivision.ItemHeight = 23;
-            this.CboDivision.Location = new System.Drawing.Point(111, 110);
-            this.CboDivision.Name = "CboDivision";
-            this.CboDivision.PromptText = "도서 장르 선택";
-            this.CboDivision.Size = new System.Drawing.Size(171, 29);
-            this.CboDivision.TabIndex = 3;
-            this.CboDivision.UseSelectable = true;
+            this.CboLevels.FormattingEnabled = true;
+            this.CboLevels.ItemHeight = 23;
+            this.CboLevels.Location = new System.Drawing.Point(111, 110);
+            this.CboLevels.Name = "CboLevels";
+            this.CboLevels.PromptText = "회원 등급 선택";
+            this.CboLevels.Size = new System.Drawing.Size(171, 29);
+            this.CboLevels.TabIndex = 3;
+            this.CboLevels.UseSelectable = true;
             // 
             // BtnDel
             // 
             this.BtnDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnDel.Location = new System.Drawing.Point(202, 292);
+            this.BtnDel.Location = new System.Drawing.Point(202, 255);
             this.BtnDel.Name = "BtnDel";
             this.BtnDel.Size = new System.Drawing.Size(80, 30);
-            this.BtnDel.TabIndex = 10;
+            this.BtnDel.TabIndex = 9;
             this.BtnDel.Text = "삭제";
             this.BtnDel.UseSelectable = true;
             this.BtnDel.Click += new System.EventHandler(this.BtnDel_Click);
@@ -165,10 +135,10 @@
             // BtnSave
             // 
             this.BtnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnSave.Location = new System.Drawing.Point(116, 292);
+            this.BtnSave.Location = new System.Drawing.Point(116, 255);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(80, 30);
-            this.BtnSave.TabIndex = 9;
+            this.BtnSave.TabIndex = 8;
             this.BtnSave.Text = "저장";
             this.BtnSave.UseSelectable = true;
             this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
@@ -176,48 +146,81 @@
             // BtnNew
             // 
             this.BtnNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnNew.Location = new System.Drawing.Point(30, 292);
+            this.BtnNew.Location = new System.Drawing.Point(30, 255);
             this.BtnNew.Name = "BtnNew";
             this.BtnNew.Size = new System.Drawing.Size(80, 30);
-            this.BtnNew.TabIndex = 8;
+            this.BtnNew.TabIndex = 7;
             this.BtnNew.Text = "신규";
             this.BtnNew.UseSelectable = true;
             this.BtnNew.Click += new System.EventHandler(this.BtnNew_Click);
             // 
-            // TxtIsbn
+            // TxtEmail
             // 
-            this.TxtIsbn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.TxtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
-            this.TxtIsbn.CustomButton.Image = null;
-            this.TxtIsbn.CustomButton.Location = new System.Drawing.Point(149, 2);
-            this.TxtIsbn.CustomButton.Name = "";
-            this.TxtIsbn.CustomButton.Size = new System.Drawing.Size(19, 19);
-            this.TxtIsbn.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TxtIsbn.CustomButton.TabIndex = 1;
-            this.TxtIsbn.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TxtIsbn.CustomButton.UseSelectable = true;
-            this.TxtIsbn.CustomButton.Visible = false;
-            this.TxtIsbn.Lines = new string[0];
-            this.TxtIsbn.Location = new System.Drawing.Point(111, 216);
-            this.TxtIsbn.MaxLength = 13;
-            this.TxtIsbn.Name = "TxtIsbn";
-            this.TxtIsbn.PasswordChar = '\0';
-            this.TxtIsbn.PromptText = "ISBN 코드 입력";
-            this.TxtIsbn.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TxtIsbn.SelectedText = "";
-            this.TxtIsbn.SelectionLength = 0;
-            this.TxtIsbn.SelectionStart = 0;
-            this.TxtIsbn.ShortcutsEnabled = true;
-            this.TxtIsbn.Size = new System.Drawing.Size(171, 24);
-            this.TxtIsbn.TabIndex = 6;
-            this.TxtIsbn.UseSelectable = true;
-            this.TxtIsbn.WaterMark = "ISBN 코드 입력";
-            this.TxtIsbn.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TxtIsbn.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.TxtIsbn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtIsbn_KeyPress);
+            this.TxtEmail.CustomButton.Image = null;
+            this.TxtEmail.CustomButton.Location = new System.Drawing.Point(149, 2);
+            this.TxtEmail.CustomButton.Name = "";
+            this.TxtEmail.CustomButton.Size = new System.Drawing.Size(19, 19);
+            this.TxtEmail.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.TxtEmail.CustomButton.TabIndex = 1;
+            this.TxtEmail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.TxtEmail.CustomButton.UseSelectable = true;
+            this.TxtEmail.CustomButton.Visible = false;
+            this.TxtEmail.Lines = new string[0];
+            this.TxtEmail.Location = new System.Drawing.Point(111, 213);
+            this.TxtEmail.MaxLength = 50;
+            this.TxtEmail.Name = "TxtEmail";
+            this.TxtEmail.PasswordChar = '\0';
+            this.TxtEmail.PromptText = "EMail 입력";
+            this.TxtEmail.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TxtEmail.SelectedText = "";
+            this.TxtEmail.SelectionLength = 0;
+            this.TxtEmail.SelectionStart = 0;
+            this.TxtEmail.ShortcutsEnabled = true;
+            this.TxtEmail.Size = new System.Drawing.Size(171, 24);
+            this.TxtEmail.TabIndex = 6;
+            this.TxtEmail.UseSelectable = true;
+            this.TxtEmail.WaterMark = "EMail 입력";
+            this.TxtEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TxtEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // TxtAddr
+            // 
+            this.TxtAddr.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.TxtAddr.CustomButton.Image = null;
+            this.TxtAddr.CustomButton.Location = new System.Drawing.Point(149, 2);
+            this.TxtAddr.CustomButton.Name = "";
+            this.TxtAddr.CustomButton.Size = new System.Drawing.Size(19, 19);
+            this.TxtAddr.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.TxtAddr.CustomButton.TabIndex = 1;
+            this.TxtAddr.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.TxtAddr.CustomButton.UseSelectable = true;
+            this.TxtAddr.CustomButton.Visible = false;
+            this.TxtAddr.Lines = new string[0];
+            this.TxtAddr.Location = new System.Drawing.Point(111, 147);
+            this.TxtAddr.MaxLength = 100;
+            this.TxtAddr.Name = "TxtAddr";
+            this.TxtAddr.PasswordChar = '\0';
+            this.TxtAddr.PromptText = "주소 입력";
+            this.TxtAddr.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TxtAddr.SelectedText = "";
+            this.TxtAddr.SelectionLength = 0;
+            this.TxtAddr.SelectionStart = 0;
+            this.TxtAddr.ShortcutsEnabled = true;
+            this.TxtAddr.Size = new System.Drawing.Size(171, 24);
+            this.TxtAddr.TabIndex = 4;
+            this.TxtAddr.UseSelectable = true;
+            this.TxtAddr.WaterMark = "주소 입력";
+            this.TxtAddr.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TxtAddr.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // TxtNames
             // 
@@ -236,69 +239,22 @@
             this.TxtNames.CustomButton.UseSelectable = true;
             this.TxtNames.CustomButton.Visible = false;
             this.TxtNames.Lines = new string[0];
-            this.TxtNames.Location = new System.Drawing.Point(111, 147);
+            this.TxtNames.Location = new System.Drawing.Point(111, 78);
             this.TxtNames.MaxLength = 32767;
             this.TxtNames.Name = "TxtNames";
             this.TxtNames.PasswordChar = '\0';
-            this.TxtNames.PromptText = "도서 제목 입력";
+            this.TxtNames.PromptText = "이름 입력";
             this.TxtNames.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.TxtNames.SelectedText = "";
             this.TxtNames.SelectionLength = 0;
             this.TxtNames.SelectionStart = 0;
             this.TxtNames.ShortcutsEnabled = true;
             this.TxtNames.Size = new System.Drawing.Size(171, 24);
-            this.TxtNames.TabIndex = 4;
+            this.TxtNames.TabIndex = 2;
             this.TxtNames.UseSelectable = true;
-            this.TxtNames.WaterMark = "도서 제목 입력";
+            this.TxtNames.WaterMark = "이름 입력";
             this.TxtNames.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtNames.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLabel7
-            // 
-            this.metroLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel7.Location = new System.Drawing.Point(44, 252);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(58, 15);
-            this.metroLabel7.TabIndex = 2;
-            this.metroLabel7.Text = "도서 가격";
-            this.metroLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // TxtAuthor
-            // 
-            this.TxtAuthor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // 
-            // 
-            this.TxtAuthor.CustomButton.Image = null;
-            this.TxtAuthor.CustomButton.Location = new System.Drawing.Point(149, 2);
-            this.TxtAuthor.CustomButton.Name = "";
-            this.TxtAuthor.CustomButton.Size = new System.Drawing.Size(19, 19);
-            this.TxtAuthor.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TxtAuthor.CustomButton.TabIndex = 1;
-            this.TxtAuthor.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TxtAuthor.CustomButton.UseSelectable = true;
-            this.TxtAuthor.CustomButton.Visible = false;
-            this.TxtAuthor.Lines = new string[0];
-            this.TxtAuthor.Location = new System.Drawing.Point(111, 78);
-            this.TxtAuthor.MaxLength = 32767;
-            this.TxtAuthor.Name = "TxtAuthor";
-            this.TxtAuthor.PasswordChar = '\0';
-            this.TxtAuthor.PromptText = "저자명 입력";
-            this.TxtAuthor.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TxtAuthor.SelectedText = "";
-            this.TxtAuthor.SelectionLength = 0;
-            this.TxtAuthor.SelectionStart = 0;
-            this.TxtAuthor.ShortcutsEnabled = true;
-            this.TxtAuthor.Size = new System.Drawing.Size(171, 24);
-            this.TxtAuthor.TabIndex = 2;
-            this.TxtAuthor.UseSelectable = true;
-            this.TxtAuthor.WaterMark = "저자명 입력";
-            this.TxtAuthor.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TxtAuthor.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel4
             // 
@@ -310,7 +266,7 @@
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(58, 15);
             this.metroLabel4.TabIndex = 2;
-            this.metroLabel4.Text = "도서 제목";
+            this.metroLabel4.Text = "회원 주소";
             this.metroLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // metroLabel6
@@ -319,45 +275,45 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel6.Location = new System.Drawing.Point(70, 221);
+            this.metroLabel6.Location = new System.Drawing.Point(69, 218);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(32, 15);
+            this.metroLabel6.Size = new System.Drawing.Size(33, 15);
             this.metroLabel6.TabIndex = 1;
-            this.metroLabel6.Text = "ISBN";
+            this.metroLabel6.Text = "EMail";
             this.metroLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // TxtBookIdx
+            // TxtMemberIdx
             // 
-            this.TxtBookIdx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.TxtMemberIdx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
-            this.TxtBookIdx.CustomButton.Image = null;
-            this.TxtBookIdx.CustomButton.Location = new System.Drawing.Point(149, 2);
-            this.TxtBookIdx.CustomButton.Name = "";
-            this.TxtBookIdx.CustomButton.Size = new System.Drawing.Size(19, 19);
-            this.TxtBookIdx.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TxtBookIdx.CustomButton.TabIndex = 1;
-            this.TxtBookIdx.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TxtBookIdx.CustomButton.UseSelectable = true;
-            this.TxtBookIdx.CustomButton.Visible = false;
-            this.TxtBookIdx.Lines = new string[0];
-            this.TxtBookIdx.Location = new System.Drawing.Point(111, 46);
-            this.TxtBookIdx.MaxLength = 32767;
-            this.TxtBookIdx.Name = "TxtBookIdx";
-            this.TxtBookIdx.PasswordChar = '\0';
-            this.TxtBookIdx.ReadOnly = true;
-            this.TxtBookIdx.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TxtBookIdx.SelectedText = "";
-            this.TxtBookIdx.SelectionLength = 0;
-            this.TxtBookIdx.SelectionStart = 0;
-            this.TxtBookIdx.ShortcutsEnabled = true;
-            this.TxtBookIdx.Size = new System.Drawing.Size(171, 24);
-            this.TxtBookIdx.TabIndex = 1;
-            this.TxtBookIdx.UseSelectable = true;
-            this.TxtBookIdx.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TxtBookIdx.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.TxtMemberIdx.CustomButton.Image = null;
+            this.TxtMemberIdx.CustomButton.Location = new System.Drawing.Point(149, 2);
+            this.TxtMemberIdx.CustomButton.Name = "";
+            this.TxtMemberIdx.CustomButton.Size = new System.Drawing.Size(19, 19);
+            this.TxtMemberIdx.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.TxtMemberIdx.CustomButton.TabIndex = 1;
+            this.TxtMemberIdx.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.TxtMemberIdx.CustomButton.UseSelectable = true;
+            this.TxtMemberIdx.CustomButton.Visible = false;
+            this.TxtMemberIdx.Lines = new string[0];
+            this.TxtMemberIdx.Location = new System.Drawing.Point(111, 46);
+            this.TxtMemberIdx.MaxLength = 32767;
+            this.TxtMemberIdx.Name = "TxtMemberIdx";
+            this.TxtMemberIdx.PasswordChar = '\0';
+            this.TxtMemberIdx.ReadOnly = true;
+            this.TxtMemberIdx.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TxtMemberIdx.SelectedText = "";
+            this.TxtMemberIdx.SelectionLength = 0;
+            this.TxtMemberIdx.SelectionStart = 0;
+            this.TxtMemberIdx.ShortcutsEnabled = true;
+            this.TxtMemberIdx.Size = new System.Drawing.Size(171, 24);
+            this.TxtMemberIdx.TabIndex = 1;
+            this.TxtMemberIdx.UseSelectable = true;
+            this.TxtMemberIdx.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TxtMemberIdx.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel5
             // 
@@ -365,11 +321,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel5.Location = new System.Drawing.Point(59, 186);
+            this.metroLabel5.Location = new System.Drawing.Point(47, 184);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(43, 15);
+            this.metroLabel5.Size = new System.Drawing.Size(55, 15);
             this.metroLabel5.TabIndex = 2;
-            this.metroLabel5.Text = "출판일";
+            this.metroLabel5.Text = "전화번호";
             this.metroLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // metroLabel1
@@ -382,7 +338,7 @@
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(58, 15);
             this.metroLabel1.TabIndex = 1;
-            this.metroLabel1.Text = "도서 장르";
+            this.metroLabel1.Text = "회원 등급";
             this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // metroLabel3
@@ -395,7 +351,7 @@
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(43, 15);
             this.metroLabel3.TabIndex = 2;
-            this.metroLabel3.Text = "저자명";
+            this.metroLabel3.Text = "회원명";
             this.metroLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // metroLabel2
@@ -408,10 +364,44 @@
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(58, 15);
             this.metroLabel2.TabIndex = 1;
-            this.metroLabel2.Text = "도서 번호";
+            this.metroLabel2.Text = "회원 번호";
             this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // FrmBookInfo
+            // TxtMobile
+            // 
+            this.TxtMobile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.TxtMobile.CustomButton.Image = null;
+            this.TxtMobile.CustomButton.Location = new System.Drawing.Point(149, 2);
+            this.TxtMobile.CustomButton.Name = "";
+            this.TxtMobile.CustomButton.Size = new System.Drawing.Size(19, 19);
+            this.TxtMobile.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.TxtMobile.CustomButton.TabIndex = 1;
+            this.TxtMobile.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.TxtMobile.CustomButton.UseSelectable = true;
+            this.TxtMobile.CustomButton.Visible = false;
+            this.TxtMobile.Lines = new string[0];
+            this.TxtMobile.Location = new System.Drawing.Point(111, 179);
+            this.TxtMobile.MaxLength = 13;
+            this.TxtMobile.Name = "TxtMobile";
+            this.TxtMobile.PasswordChar = '\0';
+            this.TxtMobile.PromptText = "전화번호 입력";
+            this.TxtMobile.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TxtMobile.SelectedText = "";
+            this.TxtMobile.SelectionLength = 0;
+            this.TxtMobile.SelectionStart = 0;
+            this.TxtMobile.ShortcutsEnabled = true;
+            this.TxtMobile.Size = new System.Drawing.Size(171, 24);
+            this.TxtMobile.TabIndex = 5;
+            this.TxtMobile.UseSelectable = true;
+            this.TxtMobile.WaterMark = "전화번호 입력";
+            this.TxtMobile.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TxtMobile.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // FrmMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -420,10 +410,9 @@
             this.Font = new System.Drawing.Font("나눔고딕", 9F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "FrmBookInfo";
+            this.Name = "FrmMember";
             this.Padding = new System.Windows.Forms.Padding(20, 70, 20, 23);
-            this.Style = MetroFramework.MetroColorStyle.Yellow;
-            this.Text = "도서 정보 관리";
+            this.Text = "도서 회원 관리";
             this.Load += new System.EventHandler(this.FrmLoginUser_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -432,7 +421,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvResult)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NudPrice)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -445,19 +433,17 @@
         private MetroFramework.Controls.MetroButton BtnDel;
         private MetroFramework.Controls.MetroButton BtnSave;
         private MetroFramework.Controls.MetroButton BtnNew;
-        private MetroFramework.Controls.MetroTextBox TxtAuthor;
-        private MetroFramework.Controls.MetroTextBox TxtBookIdx;
+        private MetroFramework.Controls.MetroTextBox TxtNames;
+        private MetroFramework.Controls.MetroTextBox TxtMemberIdx;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroTextBox TxtIsbn;
-        private MetroFramework.Controls.MetroTextBox TxtNames;
-        private MetroFramework.Controls.MetroLabel metroLabel7;
+        private MetroFramework.Controls.MetroTextBox TxtEmail;
+        private MetroFramework.Controls.MetroTextBox TxtAddr;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroComboBox CboDivision;
-        private MetroFramework.Controls.MetroDateTime DtpReleaseDate;
-        private System.Windows.Forms.NumericUpDown NudPrice;
+        private MetroFramework.Controls.MetroComboBox CboLevels;
+        private MetroFramework.Controls.MetroTextBox TxtMobile;
     }
 }

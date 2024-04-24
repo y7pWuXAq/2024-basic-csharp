@@ -401,9 +401,16 @@
 - 기존 만들어진 Form을 복사해서 변경할 시 : **.cs에 클래스명, 생성자, *.Designer.cs에 있는 클래스명** 3가지 이름 변경
     - 도서 장르 관리
     - 도서 정보 관리
+
+
+### DAY 10
+
+- 도서 관리 앱 완료!
     - 도서 회원 관리
     - 도서 대출 관리
     - 이 프로그램은...
+
+![도서관리앱](https://raw.githubusercontent.com/y7pWuXAq/2024-basic-csharp/main/images/cs006.png)
 
 
 ### 나머지

@@ -46,18 +46,25 @@ namespace _22_NewBookRentalShopApp
         private void BtnSave_Click(object sender, EventArgs e)
         {
             var md5Hash = MD5.Create(); // MD5 암호화용 객체 생성
+            var valid = true;
+            var errMsg = "";
 
             // 입력검증(Validation Check), 아이디, 패스워드를 안 넣으면
-                        if (string.IsNullOrEmpty(TxtUserId.Text))
+            if (string.IsNullOrEmpty(TxtUserId.Text))
             {
-                MessageBox.Show("사용자 아이디는 비워둘 수 없습니다.");
-                return;
+                errMsg += "사용자 아이디는 비워둘 수 없습니다.\n";
+                valid = false;
             }
 
             if (string.IsNullOrEmpty(TxtPassword.Text))
             {
-                MessageBox.Show("사용자 비밀번호는 비워둘 수 없습니다.");
-                return;
+                errMsg += "사용자 비밀번호는 비워둘 수 없습니다.\n";
+                valid = false;
+            }
+
+            if (valid == false)
+            {
+                MessageBox.Show(errMsg, "경고", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             try

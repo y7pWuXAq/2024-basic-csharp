@@ -117,38 +117,47 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Login" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imgs\Login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="login1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imgs\login.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="division" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imgs\division.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="member1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imgs\member.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="book1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imgs\book.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rental1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imgs\rental.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="division1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imgs\division.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="book" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imgs\book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="member" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imgs\member.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rental" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imgs\rental.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\imgs\search2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEACACoCAAAFgAAACgAAAAgAAAAQAAAAAEACAAAAAAAAAQAAN0AAADdAAAAAAEAAAAB
+        AAD///8A29vbAHTR/wB3ZkQAcWJEAOPd0gB31fwAc1xAAHbW/AByXkAAcV1CAHJfQgB21v0Acl9BAHJe
+        QQB1s8kA5t3PAHfW/ADh2MoApJWAAHfV/QB0naUAcl5BAHJeQQB41fwAd9X8AOXczwDYzb4Ad9X8AHJe
+        QQByX0IAcl9DAHJgRQByYUUAcmFGAHJiRwByY0kAcmRKAHJkSwByZ08AcmhRAHJpUgByaVMAc2tVAHNs
+        VwBzbFgAc25aAHNwXgBzcmAAc3doAHN4aQBzeGoAc3tvAHN/dQBzgXcAdIJ6AHSEfAB0iIQAdIqHAHSL
+        iAB0jIkAdI2LAHSOjQB0kZEAdJOVAHSWmgB0mZ0AdJmeAHWboQB1nKIAdZ2kAHWhqgB1oqwAdaSuAHWm
+        swB1qLYAdaq5AHWuvgB1r8EAdbDBAHWxxAB2s8YAdrPHAHa0yAB2tcoAdrfMAHa3zQB2uM4A5dzPAHa6
+        0gB2u9MAdrzVAHa+1wB2wd0AdsLfAHbE4QB2xeIAdsblAHbH5wB3y+wAcMbtAHDH7gBxyO8Ad83wAHfP
+        8wBzzfQAd9D0AHTP9gB00PcAd9L4AHfU+gB31PsAd9X8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABhQYGBgYGBgYGBgYGBgYGBgY
+        GBgYGBgYGBgYGBgYFAYZZmVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVmGW9lcHBwcHBwcHBwcHBw
+        cHBwcHBwcHBwcHBwcHBwcGVvb2VwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwZW9vZXBwcHBwcHBw
+        cHBwcHBwcHBwcHBwcHBwcHBwcHBlb29lcHBUVHBBYnBDNDQ8b2dFcHBUSXBwcEpecHBwcGVvb2VwcD4+
+        VSFhcCk7Rk1wViJwZyo0cHBwMkdwcHBwZW9vZXBwPj4xP3BwKVJwcHBWInA6HTRwcHAyR3BwcHBlb29l
+        cHA+Hx9EcHAkKy83b1YiUyE5NHBwcDJHcHBwcGVvb2VwcD44TCJdcCdAS1dwViAsQkY0cHBwMkdwcHBw
+        ZW9vZXBwPj5qKFFwKVJwcHBWHTBtRjRwcHAyR3BwcHBlb29lcHBAJSYzb3AuKC01b1oeWXBINnA9LSMn
+        LVBwcGVvb2VwcGhPW3BwcF9PT1xwcGBwcG5jcF5PS05PaHBwZW9vZXBwcHBwcHBwcHBwcHBwcHBwcHBw
+        cHBwcHBwcHBlb29lcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcGVvHGRra2tra2tra2tra2tra2tr
+        a2tra2tra2tra2trZBwRbGlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlsEQIIDAwMDAwMDAwMDBUP
+        DAwMDA8VDAwMDAwMDAwMDAgCAAAAAAAAAAAAAAAACg0AAAAADQkAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAEFgAAAAAWBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXBAAABBcAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAA4LAQELDgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABxMaGhMHAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAADG1hYGwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASWFgSAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAUQEAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAP///////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/zz///88////mf///4H///+B////gf///8
+        P////D//////////////////
+</value>
   </data>
 </root>
