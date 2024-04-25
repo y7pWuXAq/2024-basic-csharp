@@ -1,20 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
 using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 
 namespace MYPEDIA
 {
-    public partial class FrmLogin : MetroForm
+    public partial class _01_FrmLogin : MetroForm
     {
+        // FrmNewMem frmNewmem = null;
+
         private bool isLogin = false;
                 
         private bool IsLogin // 로그인 성공여부 저장 변수
@@ -23,17 +18,14 @@ namespace MYPEDIA
             set { isLogin = value; }
         }
 
-        #region '생성자 초기화 영역'
-        public FrmLogin()
+        public _01_FrmLogin()
         {
             InitializeComponent();
 
             TxtUserId.Text = string.Empty;
             TxtPassword.Text = string.Empty;
         }
-        #endregion
 
-        #region '로그인 이벤트 핸들러'
         /* 로그인 버튼 이벤트 핸들러 */
         private void BtnLogin_Click(object sender, EventArgs e)
         {
@@ -57,6 +49,8 @@ namespace MYPEDIA
                 return;
             }
 
+            MessageBox.Show("환영합니다!", "^^", MessageBoxButtons.OK);
+
             //DB 연계
             IsLogin = LoginProcess(); // 로그인 성공하면 True, 실패하면 False 리턴
             if (IsLogin) this.Close();
@@ -79,9 +73,28 @@ namespace MYPEDIA
                 BtnLogin_Click(sender, e);
             }
         }
-        #endregion
 
-        #region 'LoginProcess() 메서드'
+        /* 비밀번호 보이기 이벤트 핸들러 */
+        private void ChkCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ChkCheck.Checked)
+            {
+                TxtPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                TxtPassword.PasswordChar = '*';
+            }
+        }
+
+        /* 로그인창 닫기 이벤트 */
+        private void FrmLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // 로그인 버튼 아닌 닫기 버튼으로 닫으면 창이 닫힘
+            if (IsLogin != true) Environment.Exit(0);
+        }
+
+
         /* 로그인 프로세스 함수 */
         private bool LoginProcess()
         {
@@ -100,7 +113,7 @@ namespace MYPEDIA
 
                 string query = @"SELECT userId
                                       , [password]
-                                   FROM usertbl
+                                   FROM membertbl
                                   WHERE userId = @userId
                                     AND [password] = @password";
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -125,30 +138,16 @@ namespace MYPEDIA
                 }
             }
         }
-        #endregion
 
-        #region '비밀번호 체크박스'
-        /* 비밀번호 보이기 이벤트 핸들러 */
-        private void ChkCheck_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ChkCheck.Checked)
-            {
-                TxtPassword.PasswordChar = '\0';
-            }
-            else
-            {
-                TxtPassword.PasswordChar = '*';
-            }
-        }
-        #endregion
 
-        #region '창닫기'
-        /* 로그인창 닫기 이벤트 */
-        private void FrmLogin_FormClosed(object sender, FormClosedEventArgs e)
+        /* 회원가입 버튼 이벤트 */
+        private void BtnSignup_Click(object sender, EventArgs e)
         {
-            // 로그인 버튼 아닌 닫기 버튼으로 닫으면 창이 닫힘
-            if (IsLogin != true) Environment.Exit(0);
+            _02_FrmNewMem popup = new _02_FrmNewMem();
+            popup.StartPosition = FormStartPosition.CenterScreen;
+            popup.TopMost = true;
+            popup.Show();
         }
-        #endregion
+
     }
 }

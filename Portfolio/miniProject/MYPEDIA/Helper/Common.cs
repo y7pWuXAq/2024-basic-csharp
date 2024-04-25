@@ -11,9 +11,14 @@ namespace MYPEDIA.Helper
     {
         // 정적으로 만드는 공통 연결문자열
         public static string ConnString = "Data Source=localhost;" +
-                                          "Initial Catalog=BookRentalShop2024;" +
+                                          "Initial Catalog=MyPEDIA;" +
                                           "Persist Security Info=True;" +
                                           "User ID=sa;Encrypt=False;Password=mssql_p@ss";
+
+
+        /* 회원가입 완료 후 로그인창으로 아이디 넘기기 */
+        public static string SelUserId {  get; set; }
+
 
         /* MD5 해시 알고리즘 암호화 */
         public static string GetMd5Hash(MD5 md5Hash, string input)

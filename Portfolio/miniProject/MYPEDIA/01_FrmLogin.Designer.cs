@@ -1,6 +1,6 @@
 ﻿namespace MYPEDIA
 {
-    partial class FrmLogin
+    partial class _01_FrmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_01_FrmLogin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnSignup = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -66,6 +66,7 @@
             this.BtnSignup.TabIndex = 8;
             this.BtnSignup.Text = "Sign UP";
             this.BtnSignup.UseVisualStyleBackColor = true;
+            this.BtnSignup.Click += new System.EventHandler(this.BtnSignup_Click);
             // 
             // label4
             // 
