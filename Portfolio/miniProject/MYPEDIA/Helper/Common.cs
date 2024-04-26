@@ -15,9 +15,13 @@ namespace MYPEDIA.Helper
                                           "Persist Security Info=True;" +
                                           "User ID=sa;Encrypt=False;Password=mssql_p@ss";
 
+        public static string LoginId { get; set; }
 
-        /* 회원가입 완료 후 로그인창으로 아이디 넘기기 */
-        public static string SelUserId {  get; set; }
+        public static bool IsLogout { get; set; }
+
+
+        public static _00_FrmMain frmMain = null;
+
 
 
         /* MD5 해시 알고리즘 암호화 */

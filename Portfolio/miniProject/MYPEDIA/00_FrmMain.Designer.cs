@@ -34,11 +34,11 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.내정보 = new System.Windows.Forms.ToolStripMenuItem();
             this.MunMyInfo = new System.Windows.Forms.ToolStripMenuItem();
+            this.MunLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.보관함 = new System.Windows.Forms.ToolStripMenuItem();
             this.MunMovie = new System.Windows.Forms.ToolStripMenuItem();
             this.MunBook = new System.Windows.Forms.ToolStripMenuItem();
             this.MunSeries = new System.Windows.Forms.ToolStripMenuItem();
-            this.MunLogout = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -98,6 +98,13 @@
             this.MunMyInfo.Text = "내 정보 관리(&I)";
             this.MunMyInfo.Click += new System.EventHandler(this.MunMyInfo_Click);
             // 
+            // MunLogout
+            // 
+            this.MunLogout.Name = "MunLogout";
+            this.MunLogout.Size = new System.Drawing.Size(180, 22);
+            this.MunLogout.Text = "로그아웃(&X)";
+            this.MunLogout.Click += new System.EventHandler(this.MunLogout_Click);
+            // 
             // 보관함
             // 
             this.보관함.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -111,26 +118,20 @@
             // MunMovie
             // 
             this.MunMovie.Name = "MunMovie";
-            this.MunMovie.Size = new System.Drawing.Size(180, 22);
+            this.MunMovie.Size = new System.Drawing.Size(110, 22);
             this.MunMovie.Text = "영화";
             // 
             // MunBook
             // 
             this.MunBook.Name = "MunBook";
-            this.MunBook.Size = new System.Drawing.Size(180, 22);
+            this.MunBook.Size = new System.Drawing.Size(110, 22);
             this.MunBook.Text = "도서";
             // 
             // MunSeries
             // 
             this.MunSeries.Name = "MunSeries";
-            this.MunSeries.Size = new System.Drawing.Size(180, 22);
+            this.MunSeries.Size = new System.Drawing.Size(110, 22);
             this.MunSeries.Text = "시리즈";
-            // 
-            // MunLogout
-            // 
-            this.MunLogout.Name = "MunLogout";
-            this.MunLogout.Size = new System.Drawing.Size(180, 22);
-            this.MunLogout.Text = "로그아웃(&X)";
             // 
             // _00_FrmMain
             // 

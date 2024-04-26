@@ -9,7 +9,6 @@ namespace MYPEDIA
     public partial class _01_FrmLogin : MetroForm
     {
         // FrmNewMem frmNewmem = null;
-
         private bool isLogin = false;
                 
         private bool IsLogin // 로그인 성공여부 저장 변수
@@ -49,11 +48,27 @@ namespace MYPEDIA
                 return;
             }
 
-            MessageBox.Show("환영합니다!", "^^", MessageBoxButtons.OK);
-
             //DB 연계
             IsLogin = LoginProcess(); // 로그인 성공하면 True, 실패하면 False 리턴
-            if (IsLogin) this.Close();
+            if (IsLogin)
+            {
+                if (Helper.Common.IsLogout == true)
+                {
+                    if (Helper.Common.frmMain != null)
+                        Helper.Common.frmMain.Show(); 
+                    else
+                    {
+                        _00_FrmMain frm = new _00_FrmMain();
+                        Helper.Common.frmMain = frm;
+                        frm.Show();
+                    }
+
+                    this.Close();
+                }
+                else
+                    this.Close();
+            }
+            
         }
 
         /* 패스워드 입력 후 엔터 이벤트 핸들러 */
@@ -128,6 +143,7 @@ namespace MYPEDIA
                 if (reader.Read())
                 {
                     chkUserId = reader["userId"] != null? reader["userId"].ToString() : "-";
+                    Helper.Common.LoginId = chkUserId;
                     chkPassword = reader["password"] != null? reader["password"].ToString() : "-";
                     return true;
                 }

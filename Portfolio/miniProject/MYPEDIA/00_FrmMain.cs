@@ -52,6 +52,8 @@ namespace MYPEDIA
 
         private void FrmMAIN_Load(object sender, EventArgs e)
         {
+            Helper.Common.IsLogout = false;
+
             _01_FrmLogin frm = new _01_FrmLogin();
             frm.StartPosition = FormStartPosition.CenterParent;
             frm.TopMost = true; // 창이 제일 위에 뜨도록 하는 설정
@@ -62,11 +64,24 @@ namespace MYPEDIA
         {
             // frmMyInfo = ShowActiveForm(frmMyInfo, typeof(_03_FrmMyInfo)) as _03_FrmMyInfo;
             _03_FrmMyInfo frmMyInfo = new _03_FrmMyInfo();
+            Helper.Common.frmMain = this;
             frmMyInfo.StartPosition = FormStartPosition.CenterParent;
             frmMyInfo.TopMost = true;
             frmMyInfo.Show();
         }
 
+        private void MunLogout_Click(object sender, EventArgs e)
+        {
+            var res = MessageBox.Show(this, "떠나시는 건가요 ㅠㅁㅠ?", "진짜?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            if (res == DialogResult.Yes)
+            {
+                Helper.Common.IsLogout = true; // 로그아웃.
+                _01_FrmLogin pmf = new _01_FrmLogin();
+                this.Hide();
+                Helper.Common.frmMain = this;
+                pmf.Show();
+            }
+        }
     }
 }

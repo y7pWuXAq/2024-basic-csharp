@@ -51,6 +51,7 @@
             this.TxtBirth = new MetroFramework.Controls.MetroTextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.BtnDel = new MetroFramework.Controls.MetroButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -219,7 +220,7 @@
             this.TxtPassword.Location = new System.Drawing.Point(104, 61);
             this.TxtPassword.MaxLength = 225;
             this.TxtPassword.Name = "TxtPassword";
-            this.TxtPassword.PasswordChar = '\0';
+            this.TxtPassword.PasswordChar = '*';
             this.TxtPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.TxtPassword.SelectedText = "";
             this.TxtPassword.SelectionLength = 0;
@@ -251,6 +252,7 @@
             this.TxtUserId.MaxLength = 20;
             this.TxtUserId.Name = "TxtUserId";
             this.TxtUserId.PasswordChar = '\0';
+            this.TxtUserId.ReadOnly = true;
             this.TxtUserId.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.TxtUserId.SelectedText = "";
             this.TxtUserId.SelectionLength = 0;
@@ -274,7 +276,7 @@
             // 
             // BtnSave
             // 
-            this.BtnSave.Location = new System.Drawing.Point(880, 34);
+            this.BtnSave.Location = new System.Drawing.Point(228, 366);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(95, 30);
             this.BtnSave.TabIndex = 10;
@@ -284,7 +286,7 @@
             // 
             // BtnCancel
             // 
-            this.BtnCancel.Location = new System.Drawing.Point(779, 34);
+            this.BtnCancel.Location = new System.Drawing.Point(14, 366);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(95, 30);
             this.BtnCancel.TabIndex = 9;
@@ -441,6 +443,8 @@
             // 
             this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
             this.splitContainer1.Panel1.Controls.Add(this.groupBox2);
+            this.splitContainer1.Panel1.Controls.Add(this.BtnCancel);
+            this.splitContainer1.Panel1.Controls.Add(this.BtnSave);
             // 
             // splitContainer1.Panel2
             // 
@@ -460,14 +464,23 @@
             this.dataGridView1.Size = new System.Drawing.Size(616, 422);
             this.dataGridView1.TabIndex = 0;
             // 
+            // BtnDel
+            // 
+            this.BtnDel.Location = new System.Drawing.Point(920, 34);
+            this.BtnDel.Name = "BtnDel";
+            this.BtnDel.Size = new System.Drawing.Size(55, 30);
+            this.BtnDel.TabIndex = 12;
+            this.BtnDel.Text = "회원탈퇴";
+            this.BtnDel.UseSelectable = true;
+            this.BtnDel.Click += new System.EventHandler(this.BtnDel_Click);
+            // 
             // _03_FrmMyInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(995, 515);
+            this.Controls.Add(this.BtnDel);
             this.Controls.Add(this.splitContainer1);
-            this.Controls.Add(this.BtnSave);
-            this.Controls.Add(this.BtnCancel);
             this.Font = new System.Drawing.Font("나눔고딕", 9F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -516,5 +529,6 @@
         private MetroFramework.Controls.MetroTextBox TxtAddr;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private MetroFramework.Controls.MetroButton BtnDel;
     }
 }
