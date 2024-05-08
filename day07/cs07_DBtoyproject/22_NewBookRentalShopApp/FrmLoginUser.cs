@@ -133,7 +133,7 @@ namespace _22_NewBookRentalShopApp
         {
             if (string.IsNullOrEmpty(TxtUserIdx.Text))
             {
-                MessageBox.Show("삭제할 사용자를 선택하세요.", "경고", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("삭제할 사용자를 선택하세요!", "경고", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
